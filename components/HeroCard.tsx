@@ -8,14 +8,18 @@ import RoleBlock from "../components/RoleBlock"
 
 const HeroCard = ({ hero }: { hero: HeroData }) => (
   <div className={styles.heroCard}>
-    <Image
-      src={hero.portrait}
-      alt={`Portrait of ${hero.name}`}
-      width={180}
-      height={310}
-    />
-    <div>
-      <h4 className={styles.heroName}>{hero.name}</h4>
+    <div className={styles.heroPortrait}>
+      <Image
+        src={hero.portrait}
+        alt={`Portrait of ${hero.name}`}
+        width={180}
+        height={310}
+      />
+    </div>
+    <div className={styles.heroDetails}>
+      <span className={styles.heroNameContainer}>
+        <h4 className={styles.heroName}>{hero.name}</h4>
+      </span>
       <RoleBlock role={hero.role} />
     </div>
   </div>

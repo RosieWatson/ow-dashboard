@@ -9,11 +9,60 @@
   background-color: white;
 }
 
+@media only screen and (max-width: 768px) {
+  .heroCard {
+    flex-direction: row;
+    width: 90%;
+    border-radius: 0 16px 16px 0;
+    height: 152px;
+  }
+}
+
+.heroPortrait {
+  width: 180px;
+  height: 310px;
+}
+
+@media only screen and (max-width: 768px) {
+  .heroPortrait {
+    width: 20%;
+    height: 137px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .heroDetails {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: wrap;
+  }
+}
+
+.heroNameContainer {
+  background-color: rgb(44, 43, 43);
+  padding: 0.5rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .heroNameContainer {
+    border-radius: 0 16px 0 0;
+  }
+}
+
 .heroName {
   color: orange;
-  padding: 0.5rem;
   margin: 0;
-  background-color: rgb(44, 43, 43);
+}
+
+@media only screen and (max-width: 768px) {
+  .heroName {
+    width: 100%;
+  }
 }
 
 .heroRole {
@@ -24,4 +73,11 @@
   margin: 0;
   color: rgb(44, 43, 43);
   border-radius: 0 0 16px 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .heroRole {
+    width: 100%;
+    border-radius: 0 0 16px 0;
+  }
 }
