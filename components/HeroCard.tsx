@@ -4,6 +4,8 @@ import Image from "next/image"
 import { HeroData } from "../types/heros"
 import styles from "../styles/Heroes.module.css"
 
+import RoleBlock from "../components/RoleBlock"
+
 const HeroCard = ({ hero }: { hero: HeroData }) => (
   <div className={styles.heroCard}>
     <Image
@@ -12,8 +14,10 @@ const HeroCard = ({ hero }: { hero: HeroData }) => (
       width={180}
       height={310}
     />
-    <p>{hero.name}</p>
-    <p>{hero.role}</p>
+    <div>
+      <h4 className={styles.heroName}>{hero.name}</h4>
+      <RoleBlock role={hero.role} />
+    </div>
   </div>
 )
 
